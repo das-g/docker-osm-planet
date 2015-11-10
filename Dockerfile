@@ -8,7 +8,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     wget
 
-CMD ["/bin/bash", "-c", "mkdir -p $osm_planet_dir && \
-                         pushd $osm_planet_dir && \
-                         wget --continue ${osm_planet_mirror}${osm_planet_path_relative_to_mirror}; \
-                         popd"]
+WORKDIR /home/osm-planet
+
+ADD src /home/osm-planet/src
+
+CMD ["/home/osm-planet/src/download_planet.sh"]
