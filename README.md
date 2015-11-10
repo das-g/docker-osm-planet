@@ -19,8 +19,6 @@ Pass the following environment variables to `docker run` with `--env <key>=<valu
 * **`osm_planet_path_relative_to_mirror`** &mdash; the file to download from the mirror. Defaults to `pbf/planet-latest.osm.pbf`
 * **`osm_planet_dir`** &mdash; where to place the downloaded file inside the container. Defaults to `/var/data/osm-planet`. You'll want to mount a host direcotry or another container's volume to the location you specify here, so that you can retrieve the downloaded file when the osm-planet container has been removed after running.
 
-Do **not** override `osm_planet_script_dir`.
-
 E.g., if you want Switzerland inside `~/tmp/data-osm` on your host (from geofabrik):
 ```shell
 docker run --rm -ti -e osm_planet_mirror='http://download.geofabrik.de/' -e osm_planet_path_relative_to_mirror='europe/switzerland-latest.osm.pbf' -v ~/tmp/data-osm:/var/data/osm-planet geometalab/osm-planet
