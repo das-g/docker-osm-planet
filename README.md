@@ -23,5 +23,5 @@ Do **not** override `osm_planet_script_dir`.
 
 E.g., if you want Switzerland inside `~/tmp/data-osm` on your host (from geofabrik):
 ```shell
-docker run --rm -ti -e osm_planet_mirror='http://download.geofabrik.de/' -e osm_planet_path_relative_to_mirror='europe/switzerland-latest.osm.pbf' -v ~/tmp/data-osm:/var/data/osm-planet geometalab/osm-planet:develop
+docker run --rm -ti -e osm_planet_mirror='http://download.geofabrik.de/' -e osm_planet_path_relative_to_mirror='europe/switzerland-latest.osm.pbf' -v ~/tmp/data-osm:/var/data/osm-planet geometalab/osm-planet
 ```
