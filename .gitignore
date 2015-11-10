@@ -1,3 +1,6 @@
+.*
+*~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -55,3 +58,9 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Hidden by naming convention, but tracked anyway:
+!.dockerignore
+!.gitignore
+!.travis.yml
+!.coveragerc
